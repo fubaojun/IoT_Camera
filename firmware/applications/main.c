@@ -38,13 +38,13 @@ int main(int argc, char** argv)
 
 	char author[] = "baojun.fu";
 	char e_mail[] = "fubaojun2006@139.com";
-	printf("******************************************************************************************\n");
-	printf("                                                                                            \n");
+	printf("***********************************************************\n");
+	printf("\n");
 	printf("   Hello      Compiled by %s      \n", author);           
 	printf("   IOT        E-mail: %s       \n", e_mail);              
 	printf("   Camera     Compile at: %s %s \n", __DATE__, __TIME__); 
-	printf("------======Startup Sucess======--------                                                            \n");
-	printf("******************************************************************************************\n");
+	printf("------======Startup Success======--------                                                            \n");
+	printf("***********************************************************\n");
 
 	fd = open("/init.sh", O_RDONLY, 0);
 	if (fd >= 0)
