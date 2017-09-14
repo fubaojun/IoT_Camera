@@ -36,13 +36,27 @@ int main(int argc, char** argv)
 	int fd;
 	char cmd[] = "/init.sh";
 
+	char author[] = "baojun.fu";
+	char e_mail[] = "fubaojun2006@139.com";
+	printf("******************************************************************************************\n");
+	printf("                                                                                            \n");
+	printf("   Hello      Compiled by %s      \n", author);           
+	printf("   IOT        E-mail: %s       \n", e_mail);              
+	printf("   Camera     Compile at: %s %s \n", __DATE__, __TIME__); 
+	printf("------======Startup Sucess======--------                                                            \n");
+	printf("******************************************************************************************\n");
+
 	fd = open("/init.sh", O_RDONLY, 0);
 	if (fd >= 0)
 	{
 		close(fd);
 
-		printf("exec init.sh...\n");
+		printf("exec %s ...\n", cmd);
 		msh_exec(cmd, sizeof(cmd));
+	}
+	else
+	{
+		printf("Can not exec %s. Something is ERROR!\n\n", cmd);
 	}
 
 	return 0;
